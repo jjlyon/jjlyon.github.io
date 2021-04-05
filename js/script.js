@@ -1,3 +1,14 @@
+let id;
+
+function handleClick() {
+  if(id) {
+    clearInterval(id);
+    id = null;
+  } else {
+    id = setInterval(() => document.getElementById('title').style.color = getRandomColor(), 400);
+  }
+}
+
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
@@ -7,4 +18,4 @@ function getRandomColor() {
   return color;
 }
 
-setInterval(() => document.getElementById('title').style.color = getRandomColor(), 400)
+document.addEventListener("DOMContentLoaded", handleClick);
