@@ -2,6 +2,7 @@ Vue.component('app-page', {
   template: `
   <div>
     <h1 id="title" class="center" :style="{color: color}">Plane Excellence</h1>
+    <a href="pages/parametric-stars.html">stars</a>
     <img src="img/unknown.png" alt="Excellent" class="center" @click="handleClick"></img>
   </div>
   `,
